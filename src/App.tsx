@@ -29,12 +29,11 @@ import { DealsPage } from './pages/deals/DealsPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
-import { PaymentSection } from './components/PaymentSection';
-import { SecurityFeatures } from './components/SecurityFeatures';
-import { VideoCall } from './components/VideoCall';
-import { MeetingCalendar } from './components/MeetingCalendar';
-import { DocumentChamber } from './components/DocumentChamber';
-
+import PaymentSection from './components/PaymentSection';
+import SecurityFeatures from './components/SecurityFeatures';
+import VideoCall from './components/VideoCall';
+import MeetingCalendar from './components/MeetingCalendar';
+import DocumentChamber from './components/DocumentChamber';
 function App() {
   return (
     <AuthProvider>
