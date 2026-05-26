@@ -29,6 +29,11 @@ import { DealsPage } from './pages/deals/DealsPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
+import { PaymentSection } from './components/PaymentSection';
+import { SecurityFeatures } from './components/SecurityFeatures';
+import { VideoCall } from './components/VideoCall';
+import { MeetingCalendar } from './components/MeetingCalendar';
+import { DocumentChamber } from './components/DocumentChamber';
 
 function App() {
   return (
@@ -89,6 +94,27 @@ function App() {
             <Route index element={<ChatPage />} />
             <Route path=":userId" element={<ChatPage />} />
           </Route>
+          {/* New Feature Routes */}
+
+<Route path="/payment" element={<DashboardLayout />}>
+  <Route index element={<PaymentSection />} />
+</Route>
+
+<Route path="/security" element={<DashboardLayout />}>
+  <Route index element={<SecurityFeatures />} />
+</Route>
+
+<Route path="/video" element={<DashboardLayout />}>
+  <Route index element={<VideoCall />} />
+</Route>
+
+<Route path="/calendar" element={<DashboardLayout />}>
+  <Route index element={<MeetingCalendar />} />
+</Route>
+
+<Route path="/document-chamber" element={<DashboardLayout />}>
+  <Route index element={<DocumentChamber />} />
+</Route>
           
           {/* Redirect root to login */}
           <Route path="/" element={<Navigate to="/login" replace />} />
